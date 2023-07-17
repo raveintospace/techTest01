@@ -12,7 +12,7 @@ struct ShowListModel: Decodable {
     let url: String
     let name: String
     let summary: String
-    let rating: Rating
+    //let rating: Rating
 }
 
 struct Rating: Decodable {
