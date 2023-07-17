@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  SwiftUIList
 //
 //  Created by Uri on 17/7/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack {
@@ -23,6 +23,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
