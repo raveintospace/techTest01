@@ -11,5 +11,11 @@ struct ShowList: Decodable {
     let id: Int
     let url: String
     let name: String
+    let summary: String
+    let rating: Rating
+    
+    struct Rating: Decodable {
+        let average: Double
+    }    
 }
 
