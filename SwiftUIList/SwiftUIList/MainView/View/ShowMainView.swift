@@ -17,7 +17,7 @@ struct ShowMainView: View {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
                         HStack{
-                            Image(systemName: "person.fill")
+                            ShowImage(urlString: show.image.original)
                             Text(show.name)
                         }
                     }
@@ -37,3 +37,5 @@ struct ContentView_Previews: PreviewProvider {
         ShowMainView()
     }
 }
+
+// AsyncImage(url: URL(string: "https://hws.dev/paul.jpg"))
