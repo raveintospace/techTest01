@@ -1,5 +1,5 @@
 //
-//  ShowListViewModel.swift
+//  ShowViewModel.swift
 //  SwiftUIList
 //
 //  Created by Uri on 17/7/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ShowListViewModel: ObservableObject {
+class ShowViewModel: ObservableObject {
     
     @Published var showList = [Show]()
     
-    func callToApi() async {
+    func getShows() async {
         guard let url = URL(string: Constants.showListURL) else { return }
         
         do {

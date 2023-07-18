@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel = ShowListViewModel()
+    @ObservedObject var viewModel = ShowViewModel()
     
     var body: some View {
         NavigationStack {
@@ -23,7 +23,7 @@ struct MainView: View {
                     }
                 }.onAppear {
                     Task {
-                        await viewModel.callToApi()
+                        await viewModel.getShows()
                     }
                 }
             }

@@ -13,7 +13,7 @@
 		340862222A65942C00CEF248 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340862212A65942C00CEF248 /* Preview Assets.xcassets */; };
 		3417DEFF2A65982C001789DE /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417DEFE2A65982C001789DE /* ShowModel.swift */; };
 		3417DF062A659B73001789DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417DF052A659B73001789DE /* Constants.swift */; };
-		3417DF0A2A659D6C001789DE /* ShowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417DF092A659D6C001789DE /* ShowListViewModel.swift */; };
+		3417DF0A2A659D6C001789DE /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3417DF092A659D6C001789DE /* ShowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		340862212A65942C00CEF248 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3417DEFE2A65982C001789DE /* ShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModel.swift; sourceTree = "<group>"; };
 		3417DF052A659B73001789DE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3417DF092A659D6C001789DE /* ShowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListViewModel.swift; sourceTree = "<group>"; };
+		3417DF092A659D6C001789DE /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		3417DF082A659D46001789DE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3417DF092A659D6C001789DE /* ShowListViewModel.swift */,
+				3417DF092A659D6C001789DE /* ShowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 			files = (
 				3417DF062A659B73001789DE /* Constants.swift in Sources */,
 				3408621D2A65942900CEF248 /* MainView.swift in Sources */,
-				3417DF0A2A659D6C001789DE /* ShowListViewModel.swift in Sources */,
+				3417DF0A2A659D6C001789DE /* ShowViewModel.swift in Sources */,
 				3408621B2A65942900CEF248 /* SwiftUIListApp.swift in Sources */,
 				3417DEFF2A65982C001789DE /* ShowModel.swift in Sources */,
 			);
