@@ -12,11 +12,13 @@ struct Show: Decodable {
     let url: String
     let name: String
     let summary: String
-    //let rating: Rating
+    let rating: Rating
+    
+    struct Rating: Decodable {
+        let average: Double?
+    }
 }
 
-struct Rating: Decodable {
-    let average: Double
-}
+
 
 
