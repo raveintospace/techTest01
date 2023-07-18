@@ -12,12 +12,12 @@ struct ShowImage: View {
     
     var body: some View {
         AsyncImage(url: URL(string: urlString)) { image in image.resizable()
-        } placeholder: { Color.red } .frame(width: 128, height: 128) .clipShape(RoundedRectangle(cornerRadius: 25))
+        } placeholder: { Color.orange } .frame(width: 128, height: 152) .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 struct ShowImage_Previews: PreviewProvider {
     static var previews: some View {
-        ShowImage(urlString: "https://hws.dev/paul.jpg")
+        ShowImage(urlString: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg")
     }
 }
