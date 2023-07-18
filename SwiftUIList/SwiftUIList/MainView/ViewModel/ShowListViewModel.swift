@@ -9,17 +9,17 @@ import Foundation
 
 class ShowListViewModel: ObservableObject {
     
-    @Published var showList = [ShowListModel]()
+    @Published var showList = [Show]()
     
     func callToApi() async {
         guard let url = URL(string: Constants.showListURL) else { return }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            if let response = try? JSONDecoder().decode([ShowListModel].self, from: data) {
+            if let response = try? JSONDecoder().decode([Show].self, from: data) {
                 DispatchQueue.main.async {
                     self.showList = response
-                    print(response)
+                    print(response.count)
                 }
             }
         } catch {
