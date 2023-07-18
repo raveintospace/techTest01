@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  ShowMainView.swift
 //  SwiftUIList
 //
 //  Created by Uri on 17/7/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ShowMainView: View {
     @ObservedObject var viewModel = ShowViewModel()
     
     var body: some View {
@@ -34,6 +34,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ShowMainView()
     }
 }
