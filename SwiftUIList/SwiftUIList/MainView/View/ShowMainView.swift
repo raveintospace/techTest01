@@ -16,9 +16,10 @@ struct ShowMainView: View {
                 List {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
-                        HStack{
+                        HStack(spacing: 20){
                             ShowImage(urlString: show.image.original)
                             Text(show.name)
+                                .font(.title)
                         }
                     }
                 }.onAppear {
