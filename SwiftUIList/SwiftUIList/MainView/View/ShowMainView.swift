@@ -19,7 +19,7 @@ struct ShowMainView: View {
                         HStack(spacing: 20){
                             ShowImage(urlString: show.image.original)
                             Text(show.name)
-                                .font(.title)
+                                .font(.title2)
                         }
                     }
                 }.onAppear {
