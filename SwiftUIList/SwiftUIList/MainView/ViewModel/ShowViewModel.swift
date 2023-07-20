@@ -19,7 +19,7 @@ class ShowViewModel: ObservableObject {
             if let response = try? JSONDecoder().decode([Show].self, from: data) {
                 DispatchQueue.main.async {
                     self.showList = response
-                    print(response.count)
+                    print("response count: \(response.count)")
                 }
             }
         } catch {
