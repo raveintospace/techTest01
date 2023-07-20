@@ -35,7 +35,7 @@ struct ShowDetailView: View {
             ScrollView {
                 Text("Summary: ")
                     .bold()
-                + Text(show.summary)
+                + Text(show.summary.removeHTMLTags())
             }
             .lineLimit(nil)
         }
