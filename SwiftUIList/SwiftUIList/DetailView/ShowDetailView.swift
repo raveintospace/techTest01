@@ -17,9 +17,14 @@ struct ShowDetailView: View {
             Text(show.name)
                 .font(.title)
                 .bold()
-            Text("10")
-            HStack {
+            HStack(alignment: .top, spacing: 0) {
+                Text("Rating: ")
+                    .bold()
+                Text("8.9")
+            }
+            HStack(alignment: .top) {
                 Text("Summary: ")
+                    .bold()
                 Text(show.summary)
             }
             Spacer()
