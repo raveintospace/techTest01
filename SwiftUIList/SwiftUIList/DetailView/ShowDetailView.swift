@@ -15,7 +15,7 @@ struct ShowDetailView: View {
             Text(show.name)
                 .font(.title)
                 .bold()
-            ShowImage(urlString: show.image.original)
+            ShowMainImage(urlString: show.image.original)
         }
         
         Spacer()

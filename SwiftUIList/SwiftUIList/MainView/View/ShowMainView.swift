@@ -18,7 +18,7 @@ struct ShowMainView: View {
                         show in
                         NavigationLink(destination: ShowDetailView(show: show)) {
                             HStack(spacing: 20){
-                                ShowImage(urlString: show.image.original)
+                                ShowMainImage(urlString: show.image.original)
                                 Text(show.name)
                                     .font(.title2)
                             }

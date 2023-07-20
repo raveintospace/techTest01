@@ -1,13 +1,13 @@
 //
-//  ShowImage.swift
+//  ShowDetailImage.swift
 //  SwiftUIList
 //
-//  Created by Uri on 18/7/23.
+//  Created by Uri on 20/7/23.
 //
 
 import SwiftUI
 
-struct ShowImage: View {
+struct ShowDetailImage: View {
     let urlString: String
     
     var body: some View {
@@ -17,8 +17,8 @@ struct ShowImage: View {
     }
 }
 
-struct ShowImage_Previews: PreviewProvider {
+struct ShowDetailImage_Previews: PreviewProvider {
     static var previews: some View {
-        ShowImage(urlString: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg")
+        ShowDetailImage(urlString: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg")
     }
 }
