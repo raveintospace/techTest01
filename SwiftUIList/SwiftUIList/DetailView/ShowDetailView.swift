@@ -11,37 +11,40 @@ struct ShowDetailView: View {
     var show: Show
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text(show.name)
-                .font(.title)
-                .fontWeight(.heavy)
-                .underline()
-                .lineLimit(1)
-                .scaledToFill()
-                .minimumScaleFactor(0.5)
-            ShowDetailImage(urlString: show.image.original)
-        }
-        .padding(.bottom, 30)
-        .padding(.horizontal, 10)
-        
-        Spacer()
-        
-        VStack(alignment: .leading, spacing: 15) {
-            HStack {
-                Text("Rating: ")
-                    .bold()
-                + Text(show.rating.average?.toString() ?? "Rating not available")
+        ScrollView {
+            VStack(spacing: 20) {
+                Text(show.name)
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .underline()
+                    .lineLimit(1)
+                    .scaledToFill()
+                    .minimumScaleFactor(0.5)
+                ShowDetailImage(urlString: show.image.original)
             }
-            ScrollView {
-                Text("Summary: ")
-                    .bold()
-                + Text(show.summary.removeHTMLTags())
+            .padding(.bottom, 30)
+            .padding(.horizontal, 10)
+            
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: 15) {
+                HStack {
+                    Text("Rating: ")
+                        .bold()
+                    + Text(show.rating.average?.toString() ?? "Rating not available")
+                }
+                HStack {
+                    Text("Summary: ")
+                        .bold()
+                    + Text(show.summary.removeHTMLTags())
+                }
+                .lineLimit(nil)
             }
-            .lineLimit(nil)
+            .padding(.horizontal, 10)
+            
+            Spacer()
         }
-        .padding(.horizontal, 10)
-        
-        Spacer()
+        .padding(.bottom, 5)
     }
 }
 
