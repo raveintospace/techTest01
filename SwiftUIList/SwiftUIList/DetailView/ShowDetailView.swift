@@ -14,8 +14,9 @@ struct ShowDetailView: View {
         VStack(spacing: 15) {
             Text(show.name)
                 .font(.title)
-                .bold()
-            ShowMainImage(urlString: show.image.original)
+                .fontWeight(.heavy)
+                .underline()
+            ShowDetailImage(urlString: show.image.original)
         }
         
         Spacer()
