@@ -11,11 +11,14 @@ struct ShowDetailView: View {
     var show: Show
     
     var body: some View {
-        VStack(spacing: 15) {
+        VStack(spacing: 20) {
             Text(show.name)
                 .font(.title)
                 .fontWeight(.heavy)
                 .underline()
+                .lineLimit(1)
+                .scaledToFill()
+                .minimumScaleFactor(0.5)
             ShowDetailImage(urlString: show.image.original)
         }
         .padding(.bottom, 30)
