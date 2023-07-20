@@ -16,7 +16,7 @@ struct ShowMainView: View {
                 List {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
-                        NavigationLink(destination: ShowDetailView()) {
+                        NavigationLink(destination: ShowDetailView(show: show)) {
                             HStack(spacing: 20){
                                 ShowImage(urlString: show.image.original)
                                 Text(show.name)

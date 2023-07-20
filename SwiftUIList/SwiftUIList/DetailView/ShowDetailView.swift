@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct ShowDetailView: View {
-    //var show: Show
+    var show: Show
     
     var body: some View {
         VStack(spacing: 15) {
-            Image(systemName: "person.fill")
+            ShowImage(urlString: show.image.original)
             Spacer()
-            Text("Show name")
+            Text(show.name)
                 .font(.title)
                 .bold()
-            Text("Show rating")
-            Text("Show summary")
+            Text("10")
+            HStack {
+                Text("Summary: ")
+                Text(show.summary)
+            }
             Spacer()
         }
     }
 }
 
-struct ShowDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShowDetailView()
-    }
-}
+//struct ShowDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ShowDetailView(show: Show(id: 1, name: "Show title", summary: "a story about a rat", rating: "\(5.0)", image: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"))
+//    }
+//}
