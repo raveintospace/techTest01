@@ -16,10 +16,12 @@ struct ShowMainView: View {
                 List {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
-                        HStack(spacing: 20){
-                            ShowImage(urlString: show.image.original)
-                            Text(show.name)
-                                .font(.title2)
+                        NavigationLink(destination: ShowDetailView()) {
+                            HStack(spacing: 20){
+                                ShowImage(urlString: show.image.original)
+                                Text(show.name)
+                                    .font(.title2)
+                            }
                         }
                     }
                 }.onAppear {
