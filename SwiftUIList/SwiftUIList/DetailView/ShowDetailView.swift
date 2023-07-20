@@ -18,20 +18,23 @@ struct ShowDetailView: View {
                 .underline()
             ShowDetailImage(urlString: show.image.original)
         }
+        .padding(.bottom, 30)
+        .padding(.horizontal, 10)
         
         Spacer()
         
         VStack(alignment: .leading, spacing: 15) {
-            HStack(alignment: .top) {
+            HStack {
                 Text("Rating: ")
                     .bold()
                 + Text("8.9")
             }
-            HStack(alignment: .top) {
+            ScrollView {
                 Text("Summary: ")
                     .bold()
                 + Text(show.summary)
             }
+            .lineLimit(nil)
         }
         .padding(.horizontal, 10)
         
