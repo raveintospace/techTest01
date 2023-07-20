@@ -16,20 +16,25 @@ struct ShowDetailView: View {
                 .font(.title)
                 .bold()
             ShowImage(urlString: show.image.original)
-            Spacer()
-            HStack(alignment: .top, spacing: 0) {
+        }
+        
+        Spacer()
+        
+        VStack(alignment: .leading, spacing: 15) {
+            HStack(alignment: .top) {
                 Text("Rating: ")
                     .bold()
-                Text("8.9")
+                + Text("8.9")
             }
             HStack(alignment: .top) {
                 Text("Summary: ")
                     .bold()
                 + Text(show.summary)
             }
-            .padding(.horizontal, 10)
-            Spacer()
         }
+        .padding(.horizontal, 10)
+        
+        Spacer()
     }
 }
 
