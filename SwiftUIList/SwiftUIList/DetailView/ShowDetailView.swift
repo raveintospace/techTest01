@@ -12,21 +12,22 @@ struct ShowDetailView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            ShowImage(urlString: show.image.original)
-            Spacer()
             Text(show.name)
                 .font(.title)
                 .bold()
+            ShowImage(urlString: show.image.original)
+            Spacer()
             HStack(alignment: .top, spacing: 0) {
                 Text("Rating: ")
                     .bold()
                 Text("8.9")
             }
-            //HStack(alignment: .top) {
+            HStack(alignment: .top) {
                 Text("Summary: ")
                     .bold()
                 + Text(show.summary)
-            //}
+            }
+            .padding(.horizontal, 10)
             Spacer()
         }
     }
