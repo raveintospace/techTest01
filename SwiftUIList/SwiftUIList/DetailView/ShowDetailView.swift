@@ -30,7 +30,7 @@ struct ShowDetailView: View {
             HStack {
                 Text("Rating: ")
                     .bold()
-                + Text("8.9")
+                + Text(show.rating.average?.toString() ?? "Rating not available")
             }
             ScrollView {
                 Text("Summary: ")
