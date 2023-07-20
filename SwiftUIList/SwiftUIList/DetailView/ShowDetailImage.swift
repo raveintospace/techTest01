@@ -13,7 +13,6 @@ struct ShowDetailImage: View {
     var body: some View {
         AsyncImage(url: URL(string: urlString)) { image in image.resizable()
         } placeholder: { Color.orange } .frame(width: 240, height: 285) .clipShape(RoundedRectangle(cornerRadius: 10))
-            .shadow(color: Color.black, radius: 5)
     }
 }
 
