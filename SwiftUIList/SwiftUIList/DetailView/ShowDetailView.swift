@@ -22,11 +22,11 @@ struct ShowDetailView: View {
                     .bold()
                 Text("8.9")
             }
-            HStack(alignment: .top) {
+            //HStack(alignment: .top) {
                 Text("Summary: ")
                     .bold()
-                Text(show.summary)
-            }
+                + Text(show.summary)
+            //}
             Spacer()
         }
     }

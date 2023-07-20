@@ -63,8 +63,8 @@
 			children = (
 				3408621A2A65942900CEF248 /* SwiftUIListApp.swift */,
 				3417DF022A659AFA001789DE /* MainView */,
-				3408621E2A65942C00CEF248 /* Assets.xcassets */,
 				343917A12A6973AC00A0F072 /* DetailView */,
+				3408621E2A65942C00CEF248 /* Assets.xcassets */,
 				340862202A65942C00CEF248 /* Preview Content */,
 				3417DF072A659B7E001789DE /* Utils */,
 			);
