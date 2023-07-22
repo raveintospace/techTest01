@@ -8,11 +8,11 @@
 import Foundation
 
 class ShowViewModel: ObservableObject {
-    
     @Published var showList = [Show]()
+    @Published var page = 1
     
     func getShows() async {
-        guard let url = URL(string: Constants.showListURL) else { return }
+        guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
