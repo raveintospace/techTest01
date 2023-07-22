@@ -18,22 +18,9 @@ struct ShowMainView: View {
                         show in
                         
                         if show.id == self.viewModel.showList.last?.id {
-                            NavigationLink(destination: ShowDetailView(show: show)) {
-                                HStack(spacing: 20){
-                                    ShowMainImage(urlString: show.image.original)
-                                    Text(show.name)
-                                        .font(.title2)
-                                    Text("Last")
-                                }
-                            }
+                            ShowCell(show: show, isLast: true, viewModel: viewModel)
                         } else {
-                            NavigationLink(destination: ShowDetailView(show: show)) {
-                                HStack(spacing: 20){
-                                    ShowMainImage(urlString: show.image.original)
-                                    Text(show.name)
-                                        .font(.title2)
-                                }
-                            }
+                            ShowCell(show: show, isLast: false, viewModel: viewModel)
                         }
                     }
                 }.onAppear {
@@ -53,4 +40,23 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// AsyncImage(url: URL(string: "https://hws.dev/paul.jpg"))
+struct ShowCell: View {
+    let show: Show
+    var isLast: Bool
+    @ObservedObject var viewModel: ShowViewModel
+    
+    var body: some View {
+        NavigationLink(destination: ShowDetailView(show: show)) {
+            HStack(spacing: 20){
+                ShowMainImage(urlString: show.image.original)
+                Text(show.name)
+                    .font(.title2)
+                
+                if self.isLast == true {
+                    Text("Last")
+                }
+            }
+        }
+    }
+}
+
