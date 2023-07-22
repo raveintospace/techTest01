@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		340862172A65942900CEF248 /* SwiftUIList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340862172A65942900CEF248 /* The TV Shows List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The TV Shows List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3408621A2A65942900CEF248 /* SwiftUIListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIListApp.swift; sourceTree = "<group>"; };
 		3408621C2A65942900CEF248 /* ShowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainView.swift; sourceTree = "<group>"; };
 		3408621E2A65942C00CEF248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		340862182A65942900CEF248 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				340862172A65942900CEF248 /* SwiftUIList.app */,
+				340862172A65942900CEF248 /* The TV Shows List.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			);
 			name = SwiftUIList;
 			productName = SwiftUIList;
-			productReference = 340862172A65942900CEF248 /* SwiftUIList.app */;
+			productReference = 340862172A65942900CEF248 /* The TV Shows List.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -365,7 +365,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,7 +394,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

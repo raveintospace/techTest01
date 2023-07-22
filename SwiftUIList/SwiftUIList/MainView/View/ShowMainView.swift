@@ -29,7 +29,7 @@ struct ShowMainView: View {
                     }
                 }
             }
-            .navigationTitle("TV Shows list")
+            .navigationTitle("TV Shows List")
         }
     }
 }
