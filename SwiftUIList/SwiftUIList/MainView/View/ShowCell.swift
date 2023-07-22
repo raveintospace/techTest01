@@ -22,10 +22,10 @@ struct ShowCell: View {
                 if self.isLast == true {
                     Text("Last")
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                print("load more data")
-                            }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            print("load more data")
                         }
+                    }
                 }
             }
         }
