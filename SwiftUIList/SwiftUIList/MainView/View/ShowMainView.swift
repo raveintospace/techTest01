@@ -16,11 +16,23 @@ struct ShowMainView: View {
                 List {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
-                        NavigationLink(destination: ShowDetailView(show: show)) {
-                            HStack(spacing: 20){
-                                ShowMainImage(urlString: show.image.original)
-                                Text(show.name)
-                                    .font(.title2)
+                        
+                        if show.id == self.viewModel.showList.last?.id {
+                            NavigationLink(destination: ShowDetailView(show: show)) {
+                                HStack(spacing: 20){
+                                    ShowMainImage(urlString: show.image.original)
+                                    Text(show.name)
+                                        .font(.title2)
+                                    Text("Last")
+                                }
+                            }
+                        } else {
+                            NavigationLink(destination: ShowDetailView(show: show)) {
+                                HStack(spacing: 20){
+                                    ShowMainImage(urlString: show.image.original)
+                                    Text(show.name)
+                                        .font(.title2)
+                                }
                             }
                         }
                     }
