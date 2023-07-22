@@ -23,7 +23,7 @@ class ShowViewModel: ObservableObject {
                 }
             }
         } catch {
-            print("error: ", error)
+            print("error: ", error.localizedDescription)
         }
     }
 }
