@@ -19,6 +19,7 @@
 		343917A52A697FA600A0F072 /* ShowDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A42A697FA600A0F072 /* ShowDetailImage.swift */; };
 		343917A72A698B0B00A0F072 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A62A698B0B00A0F072 /* ExtensionString.swift */; };
 		343917A92A698F9A00A0F072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A82A698F9A00A0F072 /* DoubleExtension.swift */; };
+		34C2FC9D2A6BE8260021B25F /* ShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2FC9C2A6BE8250021B25F /* ShowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		343917A42A697FA600A0F072 /* ShowDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailImage.swift; sourceTree = "<group>"; };
 		343917A62A698B0B00A0F072 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		343917A82A698F9A00A0F072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		34C2FC9C2A6BE8250021B25F /* ShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				3408621C2A65942900CEF248 /* ShowMainView.swift */,
 				342F765E2A66EC4A0094E69F /* ShowMainImage.swift */,
+				34C2FC9C2A6BE8250021B25F /* ShowCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				343917A72A698B0B00A0F072 /* ExtensionString.swift in Sources */,
 				342F765F2A66EC4A0094E69F /* ShowMainImage.swift in Sources */,
 				3417DEFF2A65982C001789DE /* ShowModel.swift in Sources */,
+				34C2FC9D2A6BE8260021B25F /* ShowCell.swift in Sources */,
 				343917A52A697FA600A0F072 /* ShowDetailImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
