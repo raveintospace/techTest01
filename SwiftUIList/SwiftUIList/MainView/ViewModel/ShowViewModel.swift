@@ -9,20 +9,22 @@ import Foundation
 
 class ShowViewModel: ObservableObject {
     @Published var showList = [Show]()
-    @Published var page = 0
+    @Published var page = 300
     
     func getShows() async {
         guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
         
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Status Code is not 200") }
             
             let oldShowList = self.showList
             
-            if let response = try? JSONDecoder().decode([Show].self, from: data) {
+            if let receivedShowList = try? JSONDecoder().decode([Show].self, from: data) {
                 DispatchQueue.main.async {
-                    self.showList = oldShowList + response
-                    print("response count: \(response.count)")
+                    self.showList = oldShowList + receivedShowList
+                    print("response count: \(receivedShowList.count)")
                     self.page += 1
                     print("page value: \(self.page)")
                 }
