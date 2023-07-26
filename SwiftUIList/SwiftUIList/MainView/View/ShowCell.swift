@@ -20,7 +20,7 @@ struct ShowCell: View {
                     .font(.title2)
                 
                 if self.isLast == true {
-                    Text("Last")    // remove for production
+                    ProgressView()
                         .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             print("load more data")
