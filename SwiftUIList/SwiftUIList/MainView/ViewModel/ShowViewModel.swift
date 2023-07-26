@@ -9,7 +9,7 @@ import Foundation
 
 class ShowViewModel: ObservableObject {
     @Published var showList = [Show]()
-    @Published var page = 281
+    @Published var page = 0
     
     func getShows() async {
         guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
