@@ -9,7 +9,7 @@ import Foundation
 
 class ShowViewModel: ObservableObject {
     @Published var showList = [Show]()
-    @Published var page = 0
+    @Published var page = 180
     @Published var pagesEnded = false
     
     func getShows() async {
@@ -23,7 +23,7 @@ class ShowViewModel: ObservableObject {
                 
                 let oldShowList = self.showList
                 
-                if let receivedShowList = try? JSONDecoder().decode([Show].self, from: data) {
+                if let receivedShowList = try? JSONDecoder().decode([Show].self, from:  data) {
                     DispatchQueue.main.async {
                         self.showList = oldShowList + receivedShowList
                         print("response count: \(receivedShowList.count)")

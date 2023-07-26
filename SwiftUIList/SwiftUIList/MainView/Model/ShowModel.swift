@@ -12,7 +12,7 @@ struct Show: Decodable {
     let name: String
     let summary: String
     let rating: Rating
-    let image: Image
+    let image: Image?
     
     struct Rating: Decodable {
         let average: Double?
