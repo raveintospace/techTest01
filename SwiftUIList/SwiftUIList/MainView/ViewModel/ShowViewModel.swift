@@ -10,6 +10,7 @@ import Foundation
 class ShowViewModel: ObservableObject {
     @Published var showList = [Show]()
     @Published var page = 0
+    @Published var pagesEnded = false
     
     func getShows() async {
         guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
@@ -34,6 +35,7 @@ class ShowViewModel: ObservableObject {
             
             else if (response as? HTTPURLResponse)?.statusCode == 404 {
                 print("error 404 - show alert: -no more shows available-")
+                pagesEnded.toggle()
             }
             
         } catch {
