@@ -36,7 +36,7 @@ struct ShowDetailView: View {
                 HStack {
                     Text("Summary: ")
                         .bold()
-                    + Text(show.summary.removeHTMLTags())
+                    + Text(show.summary?.removeHTMLTags() ?? "Summary not available")
                 }
                 .lineLimit(nil)
             }
