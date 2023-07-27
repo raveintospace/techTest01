@@ -9,7 +9,7 @@ import Foundation
 
 class ShowViewModel: ObservableObject {
     @Published var showList = [Show]()
-    @Published var page = 5
+    @Published var page = 280
     @Published var pagesEnded = false
     
     func getShows() async {
