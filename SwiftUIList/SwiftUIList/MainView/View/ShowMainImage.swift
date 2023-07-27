@@ -18,10 +18,8 @@ struct ShowMainImage: View {
     var body: some View {
         AsyncImage(url: URL(string: urlString)) { phase in
             switch phase {
-            case .failure: Image(systemName: "photo")
-                    .font(.largeTitle)
-            case .success (let image): image.resizable()
-            default: Image(systemName: "photo")
+            case .success (let imageToShow): imageToShow.resizable()
+            default: Image("placeholderImg")
                     .font(.largeTitle)
             }
         }

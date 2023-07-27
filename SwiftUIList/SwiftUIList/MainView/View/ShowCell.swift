@@ -15,7 +15,7 @@ struct ShowCell: View {
     var body: some View {
         NavigationLink(destination: ShowDetailView(show: show)) {
             HStack(spacing: 20){
-                ShowMainImage(urlString: show.image?.original ?? "https://placehold.co/96x120?text=No+Image\nAvailable&font=Montserrat.jpg")
+                ShowMainImage(urlString: show.image?.original ?? "")
                 Text(show.name)
                     .font(.title2)
                 
