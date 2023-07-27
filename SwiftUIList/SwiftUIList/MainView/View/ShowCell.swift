@@ -20,8 +20,7 @@ struct ShowCell: View {
                     .font(.title2)
                 
                 if self.isLast == true {
-                    ProgressView()
-                        .onAppear {
+                    onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             print("load more data")
                             Task {

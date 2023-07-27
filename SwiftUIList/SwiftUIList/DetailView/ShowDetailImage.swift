@@ -11,8 +11,14 @@ struct ShowDetailImage: View {
     let urlString: String
     
     var body: some View {
-        AsyncImage(url: URL(string: urlString)) { image in image.resizable()
-        } placeholder: { Color.orange } .frame(width: 240, height: 300) .clipShape(RoundedRectangle(cornerRadius: 10))
+        AsyncImage(url: URL(string: urlString)) { phase in
+            switch phase {
+            case .success (let imageToShow): imageToShow.resizable()
+            default: Image("placeholderImg")
+                    .font(.largeTitle)
+            }
+        }
+        .frame(width: 240, height: 300) .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 

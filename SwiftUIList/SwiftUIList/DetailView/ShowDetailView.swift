@@ -20,7 +20,7 @@ struct ShowDetailView: View {
                     .lineLimit(1)
                     .scaledToFill()
                     .minimumScaleFactor(0.5)
-                ShowDetailImage(urlString: show.image?.original ?? "https://placehold.co/96x120?text=No+Image+Available")
+                ShowDetailImage(urlString: show.image?.original ?? "")
             }
             .padding(.bottom, 30)
             .padding(.horizontal, 10)
