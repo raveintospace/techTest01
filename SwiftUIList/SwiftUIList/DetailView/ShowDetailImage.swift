@@ -14,7 +14,7 @@ struct ShowDetailImage: View {
         AsyncImage(url: URL(string: urlString)) { phase in
             switch phase {
             case .success (let imageToShow): imageToShow.resizable()
-            default: Image("placeholderImg")
+            default: Image("placeholderImageBig")
                     .font(.largeTitle)
             }
         }
