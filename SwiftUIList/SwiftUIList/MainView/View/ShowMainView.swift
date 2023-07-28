@@ -38,7 +38,7 @@ struct ShowMainView: View {
                 }, label: {
                     Text("Server error \n Click here for more info").lineLimit(nil)
                 })
-                .padding(.top, 10)
+                .padding(.vertical, 10)
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle)
                 .tint(.red)
