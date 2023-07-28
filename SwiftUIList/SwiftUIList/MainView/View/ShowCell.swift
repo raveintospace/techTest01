@@ -16,11 +16,10 @@ struct ShowCell: View {
         NavigationLink(destination: ShowDetailView(show: show)) {
             HStack(spacing: 20){
                 ShowMainImage(urlString: show.image?.original ?? "")
-                Text(show.name)
-                    .font(.title2)
                 
                 if self.isLast == true {
-                    ProgressView()
+                    Text(show.name)
+                        .font(.title2)
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 print("load more data")
@@ -29,6 +28,11 @@ struct ShowCell: View {
                                 }
                             }
                         }
+                }
+                
+                else {
+                    Text(show.name)
+                        .font(.title2)
                 }
             }
         }
