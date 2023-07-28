@@ -35,7 +35,10 @@ class ShowViewModel: ObservableObject {
             
             else if (response as? HTTPURLResponse)?.statusCode == 404 {
                 print("error 404 - show alert: -no more shows available-")
-                pagesEnded.toggle()
+                DispatchQueue.main.async {
+                    self.pagesEnded.toggle()
+                }
+                
             }
             
         } catch {
