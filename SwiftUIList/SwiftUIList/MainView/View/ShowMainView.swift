@@ -33,9 +33,15 @@ struct ShowMainView: View {
             .navigationTitle("TV Shows List")
             
             if viewModel.pagesEnded {
-                Button("Server error") {
+                Button(action: {
                     pagesEnded = true
-                }
+                }, label: {
+                    Text("Server error \n Click here for more info").lineLimit(nil)
+                })
+                .padding(.top, 10)
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle)
+                .tint(.red)
                 .alert(isPresented: $pagesEnded) {
                     Alert(title: Text("No more shows available"), dismissButton: .default(Text("OK")))
                 }
