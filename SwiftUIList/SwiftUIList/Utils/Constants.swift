@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-    static let showListURL = "https://api.tvmaze.com/shows" 
+    static let showListURL = "https://api.tvmaze.com/shows?page="
 }
