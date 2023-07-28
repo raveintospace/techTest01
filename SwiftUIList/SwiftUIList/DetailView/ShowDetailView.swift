@@ -20,7 +20,7 @@ struct ShowDetailView: View {
                     .lineLimit(1)
                     .scaledToFill()
                     .minimumScaleFactor(0.5)
-                ShowDetailImage(urlString: show.image.original)
+                ShowDetailImage(urlString: show.image?.original ?? "")
             }
             .padding(.bottom, 30)
             .padding(.horizontal, 10)
@@ -36,7 +36,7 @@ struct ShowDetailView: View {
                 HStack {
                     Text("Summary: ")
                         .bold()
-                    + Text(show.summary.removeHTMLTags())
+                    + Text(show.summary?.removeHTMLTags() ?? "Summary not available")
                 }
                 .lineLimit(nil)
             }

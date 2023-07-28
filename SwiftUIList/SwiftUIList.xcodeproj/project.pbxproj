@@ -19,10 +19,11 @@
 		343917A52A697FA600A0F072 /* ShowDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A42A697FA600A0F072 /* ShowDetailImage.swift */; };
 		343917A72A698B0B00A0F072 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A62A698B0B00A0F072 /* ExtensionString.swift */; };
 		343917A92A698F9A00A0F072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A82A698F9A00A0F072 /* DoubleExtension.swift */; };
+		34C2FC9D2A6BE8260021B25F /* ShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2FC9C2A6BE8250021B25F /* ShowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		340862172A65942900CEF248 /* SwiftUIList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340862172A65942900CEF248 /* The TV Shows List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The TV Shows List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3408621A2A65942900CEF248 /* SwiftUIListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIListApp.swift; sourceTree = "<group>"; };
 		3408621C2A65942900CEF248 /* ShowMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainView.swift; sourceTree = "<group>"; };
 		3408621E2A65942C00CEF248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		343917A42A697FA600A0F072 /* ShowDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailImage.swift; sourceTree = "<group>"; };
 		343917A62A698B0B00A0F072 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		343917A82A698F9A00A0F072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		34C2FC9C2A6BE8250021B25F /* ShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,7 @@
 		340862182A65942900CEF248 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				340862172A65942900CEF248 /* SwiftUIList.app */,
+				340862172A65942900CEF248 /* The TV Shows List.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3408621C2A65942900CEF248 /* ShowMainView.swift */,
+				34C2FC9C2A6BE8250021B25F /* ShowCell.swift */,
 				342F765E2A66EC4A0094E69F /* ShowMainImage.swift */,
 			);
 			path = View;
@@ -156,7 +159,7 @@
 			);
 			name = SwiftUIList;
 			productName = SwiftUIList;
-			productReference = 340862172A65942900CEF248 /* SwiftUIList.app */;
+			productReference = 340862172A65942900CEF248 /* The TV Shows List.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,6 +221,7 @@
 				343917A72A698B0B00A0F072 /* ExtensionString.swift in Sources */,
 				342F765F2A66EC4A0094E69F /* ShowMainImage.swift in Sources */,
 				3417DEFF2A65982C001789DE /* ShowModel.swift in Sources */,
+				34C2FC9D2A6BE8260021B25F /* ShowCell.swift in Sources */,
 				343917A52A697FA600A0F072 /* ShowDetailImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +365,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,7 +394,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
