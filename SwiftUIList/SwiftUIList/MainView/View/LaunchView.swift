@@ -14,19 +14,20 @@ struct LaunchView: View {
                 .ignoresSafeArea()
             Image("launchImage")
                 .resizable()
-                .frame(width: 300)
-                .frame(height: 300)
+                .frame(width: 350)
+                .frame(height: 350)
         }
         .safeAreaInset(edge: .bottom) {
             VStack{
                 Text("Created by")
                     .fontWeight(.heavy)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(Color("YellowText"))
+                    .padding(.bottom, -3)
                 Image("logo_U46")
                     .resizable()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 40, height: 40)
             }
-            .padding(5)
+            .padding(10)
         }
     }
 }
