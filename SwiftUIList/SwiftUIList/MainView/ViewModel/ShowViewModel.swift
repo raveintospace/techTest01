@@ -21,17 +21,11 @@ class ShowViewModel: ObservableObject {
             if (response as? HTTPURLResponse)?.statusCode == 200 {
                 print("status code 200")
                 
-                let oldShowList = showList
-                
-                if let receivedShowList = try? JSONDecoder().decode([Show].self, from:  data) {
-                    DispatchQueue.main.async { [weak self] in
-                        guard let self = self else { return }
-                        self.showList = oldShowList + receivedShowList
-                        print("response count: \(receivedShowList.count)")
-                        self.page += 1
-                        print("page value: \(self.page)")
-                    }
-                }
+                let receivedShowList = try JSONDecoder().decode([   Show].self, from:  data)
+                self.showList += receivedShowList
+                self.page += 1
+                print("response count: \(receivedShowList.count)")
+                print("page value: \(self.page)")
             }
             
             else if (response as? HTTPURLResponse)?.statusCode == 404 {
@@ -44,7 +38,7 @@ class ShowViewModel: ObservableObject {
             }
             
         } catch {
-            print("error: ", error.localizedDescription)
+            print("error: ", error)
         }
     }
 }
