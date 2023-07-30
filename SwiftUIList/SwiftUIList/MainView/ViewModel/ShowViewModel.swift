@@ -6,43 +6,48 @@
 //
 
 import Foundation
+import Combine
 
 class ShowViewModel: ObservableObject {
-    @Published var showList = [Show]()
-    @Published var page = 0             // last page 280
-    @Published var pagesEnded = false
+    @Published var showList: [Show]
+    @Published var pagesEnded: Bool
     
-    func getShows() async {        
-        guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
-        
-        do {
-            let (data, response) = try await URLSession.shared.data(from: url)
-            
-            if (response as? HTTPURLResponse)?.statusCode == 200 {
-                print("status code 200")
-                
-                let receivedShowList = try JSONDecoder().decode([   Show].self, from:  data)
-                
+    private var page: Int            // last page 280
+    private let showRepository: ShowRepository
+    
+    private var cancellableBag = Set<AnyCancellable>()
+    
+    init(showList: [Show] = [Show](),
+         page: Int = 280,
+         pagesEnded: Bool = false,
+         showRepository: ShowRepository = ShowRepository()) {
+        self.showList = showList
+        self.page = page
+        self.pagesEnded = pagesEnded
+        self.showRepository = showRepository
+        binding()
+    }
+    
+    private func binding() {
+        showRepository
+            .observeShows()
+            .receive(on: DispatchQueue.main)
+            .replaceError(with: []) //this sets Failure to Never
+            .assign(to: \.showList, on: self)
+            .store(in: &cancellableBag)
+    }
+    
+    func fetchShows() async {
+        if !pagesEnded {
+            do {
+                try await showRepository.fetchShows(page: page)
+                page += 1
+            } catch {
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-                    self.showList += receivedShowList
-                    self.page += 1
-                    print("response count: \(receivedShowList.count)")
-                    print("page value: \(self.page)")
+                    self.pagesEnded = true
                 }
             }
-            
-            else if (response as? HTTPURLResponse)?.statusCode == 404 {
-                print("error 404 - show alert: -no more shows available-")
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
-                    self.pagesEnded.toggle()
-                }
-                
-            }
-            
-        } catch {
-            print("error: ", error)
         }
     }
 }
