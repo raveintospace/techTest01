@@ -12,7 +12,7 @@ class ShowViewModel: ObservableObject {
     @Published var page = 0             // last page 280
     @Published var pagesEnded = false
     
-    func getShows() async {
+    func getShows() async {        
         guard let url = URL(string: Constants.showListURL+"\(page)") else { return }
         
         do {
@@ -21,10 +21,11 @@ class ShowViewModel: ObservableObject {
             if (response as? HTTPURLResponse)?.statusCode == 200 {
                 print("status code 200")
                 
-                let oldShowList = self.showList
+                let oldShowList = showList
                 
                 if let receivedShowList = try? JSONDecoder().decode([Show].self, from:  data) {
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
                         self.showList = oldShowList + receivedShowList
                         print("response count: \(receivedShowList.count)")
                         self.page += 1
@@ -35,7 +36,8 @@ class ShowViewModel: ObservableObject {
             
             else if (response as? HTTPURLResponse)?.statusCode == 404 {
                 print("error 404 - show alert: -no more shows available-")
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
                     self.pagesEnded.toggle()
                 }
                 

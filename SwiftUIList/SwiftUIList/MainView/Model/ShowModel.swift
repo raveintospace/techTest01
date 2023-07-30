@@ -19,6 +19,6 @@ struct Show: Decodable {
     }
     
     struct Image: Decodable {
-        let original: String
+        let medium: String
     }
 }
