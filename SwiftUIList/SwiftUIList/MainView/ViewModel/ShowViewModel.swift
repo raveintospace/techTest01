@@ -22,10 +22,14 @@ class ShowViewModel: ObservableObject {
                 print("status code 200")
                 
                 let receivedShowList = try JSONDecoder().decode([   Show].self, from:  data)
-                self.showList += receivedShowList
-                self.page += 1
-                print("response count: \(receivedShowList.count)")
-                print("page value: \(self.page)")
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.showList += receivedShowList
+                    self.page += 1
+                    print("response count: \(receivedShowList.count)")
+                    print("page value: \(self.page)")
+                }
             }
             
             else if (response as? HTTPURLResponse)?.statusCode == 404 {
