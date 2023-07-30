@@ -17,17 +17,17 @@ struct ShowMainView: View {
                 List {
                     ForEach(viewModel.showList, id: \.id) {
                         show in
-                        
-                        if show.id == self.viewModel.showList.last?.id {
-                            ShowCell(show: show, isLast: true, viewModel: viewModel)
-                        } else {
-                            ShowCell(show: show, isLast: false, viewModel: viewModel)
+                        ShowCell(show: show)
+                    }
+                    ShowLastCell()
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                print("load more data")
+                                Task {
+                                    await self.viewModel.getShows()
+                                }
+                            }
                         }
-                    }
-                }.onAppear {
-                    Task {
-                        await viewModel.getShows()
-                    }
                 }
             }
             .navigationTitle("TV Shows List")

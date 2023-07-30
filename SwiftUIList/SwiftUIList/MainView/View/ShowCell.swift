@@ -9,31 +9,13 @@ import SwiftUI
 
 struct ShowCell: View {
     let show: Show
-    var isLast: Bool
-    @ObservedObject var viewModel: ShowViewModel
     
     var body: some View {
         NavigationLink(destination: ShowDetailView(show: show)) {
             HStack(spacing: 20){
                 ShowMainImage(urlString: show.image?.original ?? "")
-                
-                if self.isLast == true {
-                    Text(show.name)
-                        .font(.title2)
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                print("load more data")
-                                Task {
-                                    await self.viewModel.getShows()
-                                }
-                            }
-                        }
-                }
-                
-                else {
-                    Text(show.name)
-                        .font(.title2)
-                }
+                Text(show.name)
+                    .font(.title2)
             }
         }
     }
@@ -41,10 +23,6 @@ struct ShowCell: View {
 
 struct ShowCell_Previews: PreviewProvider {
     static var previews: some View {
-        ShowCell(show: Show(id: 0, name: "Person of interest", summary: "testtest", rating: Show.Rating(average: 5.0), image: Show.Image.init(original: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg")), isLast: false, viewModel: ShowViewModel())
+        ShowCell(show: Show(id: 0, name: "Person of interest", summary: "testtest", rating: Show.Rating(average: 5.0), image: Show.Image.init(original: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg")))
     }
 }
-
-
-
-
