@@ -22,7 +22,7 @@ struct ShowMainView: View {
                     ShowLastCell()
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { 
-                                print("load more data")
+                                debugPrint("load more data")
                                 Task {
                                     await self.viewModel.fetchShows()
                                 }
