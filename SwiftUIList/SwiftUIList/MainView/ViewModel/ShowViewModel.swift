@@ -18,12 +18,12 @@ class ShowViewModel: ObservableObject {
     private var cancellableBag = Set<AnyCancellable>()
     
     init(showList: [Show] = [Show](),
-         page: Int = 0,
          pagesEnded: Bool = false,
+         page: Int = 0,
          showRepository: ShowRepository = ShowRepository()) {
         self.showList = showList
-        self.page = page
         self.pagesEnded = pagesEnded
+        self.page = page
         self.showRepository = showRepository
         binding()
     }
