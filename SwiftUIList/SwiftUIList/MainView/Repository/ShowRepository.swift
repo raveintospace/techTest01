@@ -8,11 +8,16 @@
 import Foundation
 import Combine
 
-struct ShowRepository {
-    private let local: LocalDataSource
-    private let remote: RemoteDataSource
+protocol ShowRepositoring {
+    func fetchShows(page: Int) async throws
+    func observeShows() -> AnyPublisher<[Show], any Error>
+}
+
+struct ShowRepository: ShowRepositoring {
+    private let local: LocalDataSourcing
+    private let remote: RemoteDataSourcing
     
-    init(local: LocalDataSource = LocalDataSource(), remote: RemoteDataSource = RemoteDataSource()) {
+    init(local: LocalDataSourcing = LocalDataSource(), remote: RemoteDataSourcing = RemoteDataSource()) {
         self.local = local
         self.remote = remote
     }

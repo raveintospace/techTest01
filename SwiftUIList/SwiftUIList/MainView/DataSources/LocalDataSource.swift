@@ -8,7 +8,12 @@
 import Foundation
 import Combine
 
-final class LocalDataSource {
+protocol LocalDataSourcing {
+    func persistShows(shows: [Show])
+    func observeShows() -> AnyPublisher<[Show], any Error>
+}
+
+final class LocalDataSource: LocalDataSourcing {
     private let shows = CurrentValueSubject<[Show], Error>([])
     
     func persistShows(shows: [Show]) {

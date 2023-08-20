@@ -13,14 +13,14 @@ class ShowViewModel: ObservableObject {
     @Published var pagesEnded: Bool
     
     private var page: Int            // last page 280
-    private let showRepository: ShowRepository
+    private let showRepository: ShowRepositoring
     
     private var cancellableBag = Set<AnyCancellable>()
     
     init(showList: [Show] = [Show](),
          pagesEnded: Bool = false,
          page: Int = 0,
-         showRepository: ShowRepository = ShowRepository()) {
+         showRepository: ShowRepositoring = ShowRepository()) {
         self.showList = showList
         self.pagesEnded = pagesEnded
         self.page = page

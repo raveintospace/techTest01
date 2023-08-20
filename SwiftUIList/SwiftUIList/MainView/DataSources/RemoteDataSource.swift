@@ -13,7 +13,11 @@ enum RemoteDataSourceError: Error {
     case unknown
 }
 
-struct RemoteDataSource {
+protocol RemoteDataSourcing {
+    func fetchShows(page: Int) async throws -> [Show]
+}
+
+struct RemoteDataSource: RemoteDataSourcing {
     func fetchShows(page: Int) async throws -> [Show] {
         guard let url = URL(string: Constants.showListURL+"\(page)") else { throw RemoteDataSourceError.unknown }
         

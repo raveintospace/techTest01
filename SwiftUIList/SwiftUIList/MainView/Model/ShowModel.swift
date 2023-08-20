@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct Show: Decodable {
+struct Show: Decodable, Equatable {
     let id: Int
     let name: String
     let summary: String?
     let rating: Rating
     let image: Image?
     
-    struct Rating: Decodable {
+    struct Rating: Decodable, Equatable {
         let average: Double?
     }
     
-    struct Image: Decodable {
+    struct Image: Decodable, Equatable {
         let medium: String
     }
 }

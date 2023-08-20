@@ -23,9 +23,24 @@
 		343917A52A697FA600A0F072 /* ShowDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A42A697FA600A0F072 /* ShowDetailImage.swift */; };
 		343917A72A698B0B00A0F072 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A62A698B0B00A0F072 /* ExtensionString.swift */; };
 		343917A92A698F9A00A0F072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343917A82A698F9A00A0F072 /* DoubleExtension.swift */; };
+		34497F552A925D5F0082790B /* ShowViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34497F542A925D5F0082790B /* ShowViewModelSpec.swift */; };
+		34497F5D2A925FD20082790B /* ShowRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34497F5C2A925FD20082790B /* ShowRepositoryMock.swift */; };
+		34497F5F2A926FBF0082790B /* ShowRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34497F5E2A926FBF0082790B /* ShowRepositorySpec.swift */; };
+		34497F612A9270A10082790B /* LocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34497F602A9270A10082790B /* LocalDataSourceMock.swift */; };
+		34497F632A9270AD0082790B /* RemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34497F622A9270AD0082790B /* RemoteDataSourceMock.swift */; };
 		349F80412A752111009B5E85 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349F80402A752111009B5E85 /* LaunchView.swift */; };
 		34C2FC9D2A6BE8260021B25F /* ShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2FC9C2A6BE8250021B25F /* ShowCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34497F562A925D5F0082790B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3408620F2A65942900CEF248 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340862162A65942900CEF248;
+			remoteInfo = SwiftUIList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		340862172A65942900CEF248 /* The TV Shows List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The TV Shows List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +60,13 @@
 		343917A42A697FA600A0F072 /* ShowDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailImage.swift; sourceTree = "<group>"; };
 		343917A62A698B0B00A0F072 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		343917A82A698F9A00A0F072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		34497F4D2A925B710082790B /* SwiftUIList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUIList.xctestplan; sourceTree = "<group>"; };
+		34497F522A925D5E0082790B /* SwiftUIListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34497F542A925D5F0082790B /* ShowViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModelSpec.swift; sourceTree = "<group>"; };
+		34497F5C2A925FD20082790B /* ShowRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepositoryMock.swift; sourceTree = "<group>"; };
+		34497F5E2A926FBF0082790B /* ShowRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepositorySpec.swift; sourceTree = "<group>"; };
+		34497F602A9270A10082790B /* LocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceMock.swift; sourceTree = "<group>"; };
+		34497F622A9270AD0082790B /* RemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceMock.swift; sourceTree = "<group>"; };
 		349F80402A752111009B5E85 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		34C2FC9C2A6BE8250021B25F /* ShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,13 +79,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34497F4F2A925D5E0082790B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3408620E2A65942900CEF248 = {
 			isa = PBXGroup;
 			children = (
+				34497F4D2A925B710082790B /* SwiftUIList.xctestplan */,
 				340862192A65942900CEF248 /* SwiftUIList */,
+				34497F532A925D5F0082790B /* SwiftUIListTests */,
 				340862182A65942900CEF248 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				340862172A65942900CEF248 /* The TV Shows List.app */,
+				34497F522A925D5E0082790B /* SwiftUIListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +205,26 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
+		34497F532A925D5F0082790B /* SwiftUIListTests */ = {
+			isa = PBXGroup;
+			children = (
+				34497F542A925D5F0082790B /* ShowViewModelSpec.swift */,
+				34497F5E2A926FBF0082790B /* ShowRepositorySpec.swift */,
+				34497F5B2A925FB80082790B /* Mock */,
+			);
+			path = SwiftUIListTests;
+			sourceTree = "<group>";
+		};
+		34497F5B2A925FB80082790B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				34497F5C2A925FD20082790B /* ShowRepositoryMock.swift */,
+				34497F602A9270A10082790B /* LocalDataSourceMock.swift */,
+				34497F622A9270AD0082790B /* RemoteDataSourceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +245,24 @@
 			productReference = 340862172A65942900CEF248 /* The TV Shows List.app */;
 			productType = "com.apple.product-type.application";
 		};
+		34497F512A925D5E0082790B /* SwiftUIListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34497F582A925D5F0082790B /* Build configuration list for PBXNativeTarget "SwiftUIListTests" */;
+			buildPhases = (
+				34497F4E2A925D5E0082790B /* Sources */,
+				34497F4F2A925D5E0082790B /* Frameworks */,
+				34497F502A925D5E0082790B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34497F572A925D5F0082790B /* PBXTargetDependency */,
+			);
+			name = SwiftUIListTests;
+			productName = SwiftUIListTests;
+			productReference = 34497F522A925D5E0082790B /* SwiftUIListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +275,10 @@
 				TargetAttributes = {
 					340862162A65942900CEF248 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					34497F512A925D5E0082790B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 340862162A65942900CEF248;
 					};
 				};
 			};
@@ -222,6 +296,7 @@
 			projectRoot = "";
 			targets = (
 				340862162A65942900CEF248 /* SwiftUIList */,
+				34497F512A925D5E0082790B /* SwiftUIListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +308,13 @@
 			files = (
 				340862222A65942C00CEF248 /* Preview Assets.xcassets in Resources */,
 				3408621F2A65942C00CEF248 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34497F502A925D5E0082790B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +344,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34497F4E2A925D5E0082790B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34497F612A9270A10082790B /* LocalDataSourceMock.swift in Sources */,
+				34497F5D2A925FD20082790B /* ShowRepositoryMock.swift in Sources */,
+				34497F632A9270AD0082790B /* RemoteDataSourceMock.swift in Sources */,
+				34497F5F2A926FBF0082790B /* ShowRepositorySpec.swift in Sources */,
+				34497F552A925D5F0082790B /* ShowViewModelSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34497F572A925D5F0082790B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340862162A65942900CEF248 /* SwiftUIList */;
+			targetProxy = 34497F562A925D5F0082790B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		340862232A65942C00CEF248 /* Debug */ = {
@@ -403,6 +505,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
+				PRODUCT_MODULE_NAME = SwiftUIList;
 				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -434,10 +537,47 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIList;
+				PRODUCT_MODULE_NAME = SwiftUIList;
 				PRODUCT_NAME = "The TV Shows List";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		34497F592A925D5F0082790B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XAMG487KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The TV Shows List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The TV Shows List";
+			};
+			name = Debug;
+		};
+		34497F5A2A925D5F0082790B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XAMG487KR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.SwiftUIListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The TV Shows List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/The TV Shows List";
 			};
 			name = Release;
 		};
@@ -458,6 +598,15 @@
 			buildConfigurations = (
 				340862262A65942C00CEF248 /* Debug */,
 				340862272A65942C00CEF248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34497F582A925D5F0082790B /* Build configuration list for PBXNativeTarget "SwiftUIListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34497F592A925D5F0082790B /* Debug */,
+				34497F5A2A925D5F0082790B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
